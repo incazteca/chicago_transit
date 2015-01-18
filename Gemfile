@@ -42,6 +42,7 @@ gem 'spring',        group: :development
 gem 'rubocop'
 gem 'pry'
 gem 'haml-rails'
+gem 'ruby_kml'
 
 group :development, :test do
   gem 'factory_girl_rails'
