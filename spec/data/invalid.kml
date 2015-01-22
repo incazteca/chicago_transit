@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="CTA_RailStations">
+  <name>CTA_RailStations</name>
+  <Snippet></Snippet>
+  <Folder id="FeatureLayer0">
+    <name>CTA_RailStations</name>
+  <Snippet></Snippet>
+    <Placemark>
+      <name>Diversey</name>
+      <styleUrl>#IconStyle00</styleUrl>
+      <Snippet></Snippet>
+<tr bgcolor="#D4E4F3">
+<td>35-Bronzeville-IIT</td>
+</tr>
+<tr bgcolor="#D4E4F3">
+<td>PARK AND RIDE</td>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates> -87.630968,41.853206,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cottage Gr-East 63rd</name>
+      <styleUrl>#IconStyle01</styleUrl>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+tr>
+<td>GTFS</td>
+<td>40720</td>
+</font>
+</body>
+</html>
+]]></description>
+      <Point>
+        <extrude>0</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates> -87.605857,41.780309,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>King Drive</name>
+td>PARK AND RIDE</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GTFS</td>
+<td>41140</td>
+</tr>
+</table>
+</font>
+</body>
+</html>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<body leftmargin="0" topmargin="0" bottommargin="0" rightmargin="0">
+</table>
+</font>
+</body>
+</html>
+]]></description>
+      <Point>
+        <extrude>0</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates> -87.705978,41.874426,0.000000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Forest Park</name>
