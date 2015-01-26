@@ -44,6 +44,7 @@ gem 'rubocop'
 gem 'pry'
 gem 'haml-rails'
 gem 'ruby_kml'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'factory_girl_rails'
