@@ -39,10 +39,12 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rb-readline'
 gem 'rubocop'
 gem 'pry'
 gem 'haml-rails'
 gem 'ruby_kml'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'factory_girl_rails'
@@ -51,4 +53,6 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'webmock', :require  => false, group: :test
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-cucumber'
 end
