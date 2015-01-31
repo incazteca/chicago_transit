@@ -1,5 +1,12 @@
 language: ruby
+
 rvm:
   - "2.1.5"
-# uncomment this line if your project needs to run something other than `rake`:
-# script: bundle exec rspec spec
+
+addons:
+    postgresql: "9.3"
+
+before_script:
+    - psql -c 'create database chicago_transit_test;' -U postgres
+
+script: bundle exec rspec spec
