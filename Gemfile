@@ -53,6 +53,7 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'webmock', :require  => false, group: :test
+  gem 'vcr'
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
 end
