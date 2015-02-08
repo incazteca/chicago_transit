@@ -3,7 +3,10 @@ require 'rails_helper'
 describe KMLManager::KMLDownloader do
   let (:cta_rail_kml_url)    { "https://data.cityofchicago.org/download/m3d6-pubu/application/xml" }
   let (:cta_station_kml_url) { "https://data.cityofchicago.org/download/bs96-uama/application/xml" }
+  let (:missing_url)         { "https://data.cityofchicago.org/download/bs-uama/application/xml" }
+  let (:invalid_url)         { "ttpS://data.city.of.chicago.org/download/" }
 
+  let (:dummy)              { "dummy_file_name" }
   let (:cta_rail_file_name) { "cta_rail_lines" }
   let (:cta_station_file_name) { "cta_train_stations" }
 
@@ -46,5 +49,13 @@ describe KMLManager::KMLDownloader do
 
     expect(backup_file_name.exist?).to be_falsey
     expect(backup_file_name.file?).to be_falsey
+  end
+
+  it "raises an error for invalid url", :vcr do
+    expect(KMLManager::KMLDownloader.download_KML(invalid_url, dummy)).to raise_error(OpenURI::HTTPError)
+  end
+
+  it "raises an error for 404", :vcr do
+    expect(KMLManager::KMLDownloader.download_KML(missing_url, dummy)).to raise_error(SocketError)
   end
 end
