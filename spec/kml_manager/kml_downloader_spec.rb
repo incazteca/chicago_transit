@@ -30,7 +30,7 @@ describe KMLManager::KMLDownloader do
     # To simulate a different file we're going to download the rail KML file
     # under the station KML file name
 
-    backup_file_name= cta_station_file_name + ".bak"
+    backup_file_name = cta_station_file_name + ".bak"
 
     [cta_station_kml_url, cta_rail_kml_url].each do |url|
       KMLManager::KMLDownloader.download_KML(url, cta_station_file_name)
@@ -41,7 +41,7 @@ describe KMLManager::KMLDownloader do
   end
 
   it "Keeps an older version if file changed", :vcr do
-    backup_file_name= cta_station_file_name + ".bak"
+    backup_file_name = cta_station_file_name + ".bak"
 
     [cta_station_kml_url, cta_station_kml_url].each do |url|
       KMLManager::KMLDownloader.download_KML(url, cta_station_file_name)
