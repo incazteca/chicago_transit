@@ -45,6 +45,7 @@ gem 'pry'
 gem 'haml-rails'
 gem 'ruby_kml'
 gem 'nokogiri'
+gem 'diffy'
 
 group :development, :test do
   gem 'factory_girl_rails'
