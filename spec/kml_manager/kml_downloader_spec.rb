@@ -18,7 +18,7 @@ describe KMLManager::KMLDownloader do
 
   it "Downloads a file for cta rail KML data", :vcr do
     downloaded_file_path = KMLManager::KMLDownloader.
-      download_KML(cta_rail_kml_url, cta_rail_file_name)
+      download_kml(cta_rail_kml_url, cta_rail_file_name)
 
     expect(downloaded_file_path.exist?).to be_truthy
     expect(downloaded_file_path.file?).to be_truthy
@@ -26,7 +26,7 @@ describe KMLManager::KMLDownloader do
 
   it "Downloads a file for cta station KML data", :vcr do
     downloaded_file_path = KMLManager::KMLDownloader.
-      download_KML(cta_station_kml_url, cta_station_file_name)
+      download_kml(cta_station_kml_url, cta_station_file_name)
 
     expect(downloaded_file_path.exist?).to be_truthy
     expect(downloaded_file_path.file?).to be_truthy
@@ -38,7 +38,7 @@ describe KMLManager::KMLDownloader do
     backup_file_name = data_directory.join("#{cta_station_file_name}.bak")
 
     [cta_station_kml_url, cta_rail_kml_url].each do |url|
-      KMLManager::KMLDownloader.download_KML(url, cta_station_file_name)
+      KMLManager::KMLDownloader.download_kml(url, cta_station_file_name)
     end
 
     expect(backup_file_name.exist?).to be_truthy
@@ -49,7 +49,7 @@ describe KMLManager::KMLDownloader do
     backup_file_name = data_directory.join("#{cta_station_file_name}.bak")
 
     [cta_station_kml_url, cta_station_kml_url].each do |url|
-      KMLManager::KMLDownloader.download_KML(url, cta_station_file_name)
+      KMLManager::KMLDownloader.download_kml(url, cta_station_file_name)
     end
 
     expect(backup_file_name.exist?).to be_falsey
@@ -57,10 +57,10 @@ describe KMLManager::KMLDownloader do
   end
 
   it "raises an error for invalid url", :vcr do
-    expect{KMLManager::KMLDownloader.download_KML(invalid_url, dummy)}.to raise_error
+    expect { KMLManager::KMLDownloader.download_kml(invalid_url, dummy) }.to raise_error
   end
 
   it "raises an error for 404", :vcr do
-    expect{KMLManager::KMLDownloader.download_KML(missing_url, dummy)}.to raise_error(OpenURI::HTTPError)
+    expect { KMLManager::KMLDownloader.download_kml(missing_url, dummy) }.to raise_error(OpenURI::HTTPError)
   end
 end

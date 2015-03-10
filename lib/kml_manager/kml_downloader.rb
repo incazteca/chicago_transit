@@ -4,7 +4,7 @@ require 'diffy'
 
 module KMLManager
   class KMLDownloader
-    def self.download_KML(url, file_name)
+    def self.download_kml(url, file_name)
       file_path = base_directory.join(file_name)
       download_into_temp_file(url)
 
@@ -18,8 +18,6 @@ module KMLManager
       move_temp_to_filename(file_path)
       Pathname.new(file_path)
     end
-
-    private
 
     def self.download_into_temp_file(url)
       open(temp_file.to_s, 'w') do |io|
