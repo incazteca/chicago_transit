@@ -1,16 +1,16 @@
 require 'rails_helper'
 
 describe KMLManager::KMLDownloader do
-  let (:cta_rail_kml_url)    { "https://data.cityofchicago.org/download/m3d6-pubu/application/xml" }
-  let (:cta_station_kml_url) { "https://data.cityofchicago.org/download/bs96-uama/application/xml" }
-  let (:missing_url)         { "https://data.cityofchicago.org/download/bs-uama/application/xml" }
-  let (:invalid_url)         { "ttpS://data.city.of.chicago.org/download/" }
+  let(:cta_rail_kml_url)    { "https://data.cityofchicago.org/download/m3d6-pubu/application/xml" }
+  let(:cta_station_kml_url) { "https://data.cityofchicago.org/download/bs96-uama/application/xml" }
+  let(:missing_url)         { "https://data.cityofchicago.org/download/bs-uama/application/xml" }
+  let(:invalid_url)         { "ttpS://data.city.of.chicago.org/download/" }
 
-  let (:dummy)                 { "dummy_file_name" }
-  let (:cta_rail_file_name)    { "cta_rail_lines" }
-  let (:cta_station_file_name) { "cta_train_stations" }
+  let(:dummy)                 { "dummy_file_name" }
+  let(:cta_rail_file_name)    { "cta_rail_lines" }
+  let(:cta_station_file_name) { "cta_train_stations" }
 
-  let (:data_directory)        { Rails.root.join('lib', 'data') }
+  let(:data_directory)        { Rails.root.join('lib', 'data') }
 
   after(:each) do
     FileUtils.rm_f(Dir.glob("#{data_directory}/*"))
