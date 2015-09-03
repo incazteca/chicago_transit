@@ -10,3 +10,4 @@ before_script:
     - psql -c 'create database chicago_transit_test;' -U postgres
 
 script: bundle exec rspec spec
+sudo: false
