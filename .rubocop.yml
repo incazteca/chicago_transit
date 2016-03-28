@@ -1,2 +1,21 @@
-inherit_from:
-    - .hound.yml
+inherit_from: .rubocop_todo.yml
+
+Documentation:
+  Enabled: false
+AllCops:
+  # Include common Ruby source files.
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'features/support/**/*'
+    - 'spec/support/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+  TargetRubyVersion: 2.3
+Style/DotPosition:
+  EnforcedStyle: trailing
