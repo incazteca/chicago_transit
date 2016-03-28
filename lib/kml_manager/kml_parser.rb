@@ -1,10 +1,11 @@
+# frozen_string_literal: true
 module KMLManager
   class KMLParser
     def self.parse(path_of_file)
       raise 'Input not a Pathname object' unless path_of_file.is_a? Pathname
       return [] unless path_of_file.exist?
 
-      kml_file = Nokogiri::XML(File.open(path_of_file)) { |config| config.strict }
+      kml_file = Nokogiri::XML(File.open(path_of_file), &:strict)
 
       entries = kml_file.css('Placemark').map do |placemark|
         coords = placemark.at_css('coordinates').text.split
