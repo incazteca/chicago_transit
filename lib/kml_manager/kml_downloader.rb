@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'pathname'
 require 'open-uri'
 require 'diffy'
@@ -10,9 +11,7 @@ module KMLManager
 
       if file_path.exist?
         diff = Diffy::Diff.new(file_path.to_s, temp_file.to_s, source: 'files')
-        if diff.count > 0
-          backup_file(file_path)
-        end
+        backup_file(file_path) if diff.count > 0
       end
 
       move_temp_to_filename(file_path)
