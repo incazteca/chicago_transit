@@ -13,5 +13,7 @@ before_script:
 script:
     - bundle exec rspec spec
     - bundle exec rubocop
+    - bundle exec bundle-audit check --update
+    - bundle exec brakeman -z
 
 sudo: false

@@ -51,6 +51,8 @@ gem 'nokogiri'
 gem 'diffy'
 
 group :development, :test do
+  gem 'bundler-audit', require: false
+  gem 'brakeman'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false, group: :test
