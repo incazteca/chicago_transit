@@ -10,9 +10,10 @@ If you wish to contribute to the project below is a rough roadmap
 
 # Roadmap
 
-1. Retrieve and parse CTA KML files
-  * KML files for CTA Stations
-  * KML files for CTA Rail lines
+1. ~~Retrieve and parse CTA KML files~~ (KML files OUTDATED) CTA now uses GTFS
+  * ~~KML files for CTA Stations~~
+  * ~~KML files for CTA Rail lines~~
+1. Retrieve and parse CTA rail stations and lines from GTFS data set.
 2. Retrieve and parse US census data for Chicago
 3. Create frontend
   * Basically create a Google map with overlays of the CTA stations and provide
